@@ -1,0 +1,4 @@
+{
+  "bucket_name": "example-s3-bucket",
+  "object_key": "example-data/sample.csv"
+}

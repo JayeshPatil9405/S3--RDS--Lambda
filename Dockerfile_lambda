@@ -1,0 +1,15 @@
+# Use Python base image for AWS Lambda
+FROM public.ecr.aws/lambda/python:3.9
+
+# Set the working directory
+WORKDIR /var/task
+
+# Copy requirements and source code
+COPY requirements.txt .
+COPY app.py .
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Set the entry point for AWS Lambda
+CMD ["app.main"]
